@@ -1,10 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Badge from '../components/Badge.astro';
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
+		<section class="w-full lg:w-[740px] mx-auto py-44">
+			<h1 class="text-white text-5xl font-bold flex justify-center flex-row gap-x-4 mb-6">Hi there, I'm Manuela 👋 <a href="https://www.linkedin.com/in/manuelaperezsimon/"  rel="noopener" target="_blank" class="flex justify-center items-center"><Badge>Looking for a change</Badge></a></h1>
+			<p class="text-white text-lg text-wrap">Argentinian in Barcelona. I am a <span class="text-yellow-200/90">FullStack Developer</span> with Psychologist background, always open to new challenges, lover of teamwork and good practices.</p>
+		</section>
 	</main>
 </Layout>
 
