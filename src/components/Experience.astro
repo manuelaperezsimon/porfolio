@@ -1,12 +1,13 @@
 ---
-import ExperienceItem from "./ExperienceItem.astro"
+import Experienceitem from "./ExperienceItem.astro";
+
 const EXPERIENCIE = [
   {
     date: "2022 - 2024",
     title: "FullStack Developer",
-    company: "Swipoo",
+    company: "Swipoo (startup)",
     description:
-      "Development of web pages with CSS, Tailwind, HTML, React, NextJS, Typescript. On the Backend side: create APIs with MongoDB and PostgresSQL. / NodeJS. Microservices based on events. SOLID principles and good programming practices. Testing: React Testing Library, Jest & Cypress (Unit testing, e2e). SEO, CWV, design, Figma, convertibility, etc. Git, GitHub, Jira, Linear.",
+      "On Frontend: Development of web pages with CSS, Tailwind, HTML, React, NextJS, Typescript. On the Backend side:  NodeJS. Create APIs (MongoDB and PostgresSQL). Microservices based on events. SOLID principles and good programming practices. Testing: React Testing Library, Jest & Cypress (Unit testing, e2e). SEO, CWV, design, Figma, convertibility, etc. Git, GitHub, Jira, Linear.",
   },
 ]
 ---
@@ -16,7 +17,7 @@ const EXPERIENCIE = [
   {
     EXPERIENCIE.map((experiencie) => (
       <li class="">
-        <ExperienceItem {...experiencie} />
+        <Experienceitem {...experiencie} />
       </li>
     ))
   }
