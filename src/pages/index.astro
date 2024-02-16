@@ -6,13 +6,15 @@ import Github from '../icons/Github.astro';
 import Gmail from '../icons/Gmail.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 import Experience from '../components/Experience.astro';
+import Projects from '../components/Projects.astro';
+
 
 ---
 
 <Layout title="Porfolio - Manuela Pérez Simón" description='Experiencia y contacto como Desarrolladora Web'>
 	<main class="px-4">
 	<SectionContainer class="mt-40">
-			<h1 class="text-white text-2xl lg:text-5xl md:text-4xl font-bold flex justify-center flex-row gap-x-4 lg:pb-10 pb-6 mb-6">Hi there, I'm Manuela 👋 <a href="https://www.linkedin.com/in/manuelaperezsimon/"  rel="noopener" target="_blank" class="flex justify-center items-center"><Badge>Looking for a change</Badge></a></h1>
+			<h1 class="text-white text-2xl lg:text-5xl md:text-4xl font-bold flex justify-center flex-row gap-x-4 lg:pb-10 pb-6 mb-6">Hi there, I'm Manuela 👋 <a href="https://www.linkedin.com/in/manuelaperezsimon/"  rel="noopener" target="_blank" class="flex justify-center items-center"><Badge class="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300">Looking for a change</Badge></a></h1>
 			<p class="text-white text-xl lg:text-xl text-wrap text-center">Argentinian in Barcelona. I am a <span class="text-yellow-200/90">FullStack Developer</span> with Psychologist background, always open to new challenges, lover of teamwork and good practices.</p>
 			<div class="flex gap-x-20 justify-center items-center mt-8">
          <nav class="text-white flex gap-x-2 hover:scale-110 sm:flex-col">
@@ -37,6 +39,9 @@ import Experience from '../components/Experience.astro';
       </SectionContainer>		
       <SectionContainer class="mt-40" id="experience">
         <Experience />
+      </SectionContainer>
+       <SectionContainer class="mt-40" id="projects">
+        <Projects />
       </SectionContainer>
 	</main>
 </Layout>
