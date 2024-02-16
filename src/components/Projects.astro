@@ -1,0 +1,147 @@
+---
+import Tailwind from "../icons/Tailwind.astro";
+import MaterialUI from "../icons/MaterialUI.astro";
+import React from "../icons/React.astro";
+import JavaScript from "../icons/Javascript.astro";
+import MongoDB from "../icons/MongoDB.astro";
+import TypeScript from "../icons/Typescript.astro";
+import NodeJS from "../icons/Nodejs.astro";
+import StyledComponents from "../icons/StyledComponents.astro";
+import Jest from "../icons/Jest.astro";
+import Badge from "./Badge.astro";
+
+
+
+const TAGS = {
+  TAILWIND: {
+    name: "Tailwind CSS",
+    icon: Tailwind,
+  },
+   STYLED_COMPONENTS: {
+    name: "Styled Components",
+    icon: StyledComponents,
+  },
+  MATERIAL_UI: {
+    name: "Material UI",
+    icon: MaterialUI,
+  },
+   REACT: {
+    name: "ReactJS",
+    icon: React,
+  },
+   JAVASCRIPT: {
+    name: "JavaScript",
+    icon: JavaScript,
+  },
+   TYPESCRIPT: {
+    name: "TypeScript",
+    icon: TypeScript,
+  },
+    NODE_JS: {
+    name: "NodeJS",
+    icon: NodeJS,
+  },
+    MONGO_DB: {
+    name: "Express.Js",
+    icon: MongoDB,
+  },
+    JEST: {
+    name: "Jest",
+    icon: Jest,
+  }
+}
+
+const projects = [
+   {
+    title: "Swipoo",
+    description: "UI platform that allows users to: Input the necesary information to be able to select a car model and load its information. Once you have selected a car model you can create a car and store it along with the name of the client. Get and show the list of the created cars and get the information about the depreciation applied to the standard value.",
+    link: "",
+    github: {front: "https://github.com/manuelaperezsimon/swipoo"},
+    image: "/swipoo.png",
+    tags: [ TAGS.REACT, TAGS.TYPESCRIPT, TAGS.JEST, TAGS.STYLED_COMPONENTS],
+  },
+   {
+    title: "Nuntia",
+    description: "The meaning of nuntia refers to the word 'post' in latin. Is a SPA where you can read posts in latin. You can read, delete or edit the posts.",
+    link: "",
+    github: {front: "https://github.com/manuelaperezsimon/nuntia"},
+    image: "/nuntia.png",
+    tags: [TAGS.REACT, TAGS.TYPESCRIPT, TAGS.JEST, TAGS.STYLED_COMPONENTS],
+  },
+  {
+    title: "resOs",
+    description: "SPA where you can see and search restaurants.",
+    link: "",
+    github: {front: "https://github.com/manuelaperezsimon/resos", back: "https://github.com/manuelaperezsimon/resos-back"},
+    image: "/resOs.png",
+    tags: [TAGS.REACT, TAGS.JAVASCRIPT, TAGS.NODE_JS,TAGS.MONGO_DB, TAGS.MATERIAL_UI],
+  },
+  {
+    title: "Beers Random",
+    description: "Web where you can get a random beer and search beers.",
+    link: "",
+    github: {front: "https://github.com/manuelaperezsimon/beersrandom"},
+    image: "/beersRandom.png",
+    tags: [TAGS.REACT, TAGS.TYPESCRIPT, TAGS.TAILWIND],
+  },
+    {
+    title: "ronWishly",
+    description: "Is a SPA where you can save your wishes. You can read, delete or edit your wishes and filter them by limit date.",
+    link: "",
+    github: {front: "https://github.com/manuelaperezsimon/ronWishly-Front", back:"https://github.com/manuelaperezsimon/ronWishly-Back"},
+    image: "/ronWishly.png",
+    tags: [TAGS.REACT, TAGS.TYPESCRIPT, TAGS.STYLED_COMPONENTS, TAGS.JEST, TAGS.NODE_JS, TAGS.MONGO_DB],
+  },
+ 
+]
+---
+
+<h2 class="text-white text-4xl semi-bold flex justify-center">Projects</h2>
+<div class="flex flex-col gap-y-16 pb-20 mt-16">
+  {
+    projects.map(({ image, title, description, tags, github }) => (
+    <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+  <div class="w-full md:w-1/2">
+    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+    </div>
+  </div>
+
+  <div class="w-full md:w-1/2 md:max-w-lg">
+    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100 text-white">
+      {title}
+    </h3>
+   
+    <div class="flex flex-col mt-2">
+      <div class="mt-2 mb-2 text-gray-400 dark:text-gray-400">{description}</div>
+      <div class="flex flex-wrap mt-2">
+      <ul class="flex flex-row mb-2 gap-x-2">
+          {tags?.map((tag) => (
+            <li>
+              <span
+                class="flex gap-x-2 rounded-full text-xs bg-[#003159] py-1 px-2"
+              >
+                <tag.icon class="h-5 w-5" />
+              </span>
+            </li>
+          ))}
+        </ul>
+    </div>
+    <div class="mt-2">
+       {github?.front && (
+      <a href={github?.front}><Badge class={`bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300`}>Frontend</Badge></a>
+     )}
+     {github?.back && (
+      <a href={github?.back}><Badge class={`bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300`}>Backend</Badge></a>
+     )
+     }    
+    </div>
+    </div>
+  </div>
+</article>
+    ))
+  }
+</div>
+
+
+
