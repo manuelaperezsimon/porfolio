@@ -56,15 +56,15 @@ const projects = [
    {
     title: "Swipoo",
     description: "UI platform that allows users to: Input the necesary information to be able to select a car model and load its information. Once you have selected a car model you can create a car and store it along with the name of the client. Get and show the list of the created cars and get the information about the depreciation applied to the standard value.",
-    link: "",
-    github: {front: "https://github.com/manuelaperezsimon/swipoo"},
+    link: "https://swipoo-cars.netlify.app/",
+    github: {front: "https://github.com/manuelaperezsimon/"},
     image: "/swipoo.webp",
     tags: [ TAGS.REACT, TAGS.TYPESCRIPT, TAGS.JEST, TAGS.STYLED_COMPONENTS],
   },
    {
     title: "Nuntia",
     description: "The meaning of nuntia refers to the word 'post' in latin. Is a SPA where you can read posts in latin. You can read, delete or edit the posts.",
-    link: "",
+    link: "https://nuntia.netlify.app/",
     github: {front: "https://github.com/manuelaperezsimon/nuntia"},
     image: "/nuntia.webp",
     tags: [TAGS.REACT, TAGS.TYPESCRIPT, TAGS.JEST, TAGS.STYLED_COMPONENTS],
@@ -80,7 +80,7 @@ const projects = [
   {
     title: "Beers Random",
     description: "Web where you can get a random beer and search beers.",
-    link: "",
+    link: "https://ronwishly.netlify.app/",
     github: {front: "https://github.com/manuelaperezsimon/beersrandom"},
     image: "/beersRandom.webp",
     tags: [TAGS.REACT, TAGS.TYPESCRIPT, TAGS.TAILWIND],
@@ -88,7 +88,7 @@ const projects = [
     {
     title: "ronWishly",
     description: "Is a SPA where you can save your wishes. You can read, delete or edit your wishes and filter them by limit date.",
-    link: "",
+    link: "https://ronwishly.netlify.app/",
     github: {front: "https://github.com/manuelaperezsimon/ronWishly-Front", back:"https://github.com/manuelaperezsimon/ronWishly-Back"},
     image: "/ronWishly.webp",
     tags: [TAGS.REACT, TAGS.TYPESCRIPT, TAGS.STYLED_COMPONENTS, TAGS.JEST, TAGS.NODE_JS, TAGS.MONGO_DB],
@@ -100,7 +100,7 @@ const projects = [
 <h2 class="text-white text-4xl semi-bold flex justify-center">Projects</h2>
 <div class="flex flex-col gap-y-16 pb-20 mt-16">
   {
-    projects.map(({ image, title, description, tags, github }) => (
+    projects.map(({ image, title, description, tags, github, link }) => (
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
@@ -130,10 +130,14 @@ const projects = [
     </div>
     <div class="mt-2">
        {github?.front && (
-      <a href={github?.front}><Badge class={`bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300`}>Frontend</Badge></a>
+      <a href={github?.front} rel="noopener" target="_blank"><Badge class={`bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300`}>Frontend</Badge></a>
      )}
      {github?.back && (
-      <a href={github?.back}><Badge class={`bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300`}>Backend</Badge></a>
+      <a href={github?.back} rel="noopener" target="_blank"><Badge class={`bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300`}>Backend</Badge></a>
+     )
+     }  
+      {link && (
+      <a href={link} rel="noopener" target="_blank"><Badge class={`bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300`}>Deploy</Badge></a>
      )
      }    
     </div>
