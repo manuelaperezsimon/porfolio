@@ -1,6 +1,8 @@
 ---
 import '@fontsource/onest/400.css'
 import Header from '../components/Header.astro';
+import { Tooltips } from 'astro-tooltips';
+
 
 interface Props {
 	title: string;
@@ -13,6 +15,7 @@ const { title, description } = Astro.props;
 <!doctype html>
 <html lang="en">
 	<head>
+    <Tooltips interactive={false} delay={[15, 140]} />
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />

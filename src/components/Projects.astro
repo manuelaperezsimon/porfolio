@@ -10,6 +10,7 @@ import NodeJS from "../icons/Nodejs.astro";
 import StyledComponents from "../icons/StyledComponents.astro";
 import Jest from "../icons/Jest.astro";
 import Badge from "./Badge.astro";
+import { Tooltips } from 'astro-tooltips';
 
 
 
@@ -27,7 +28,7 @@ const TAGS = {
     icon: MaterialUI,
   },
    REACT: {
-    name: "ReactJS",
+    name: "ReactJs",
     icon: React,
   },
    JAVASCRIPT: {
@@ -39,11 +40,11 @@ const TAGS = {
     icon: TypeScript,
   },
     NODE_JS: {
-    name: "NodeJS",
+    name: "NodeJs",
     icon: NodeJS,
   },
     MONGO_DB: {
-    name: "Express.Js",
+    name: "ExpressJs",
     icon: MongoDB,
   },
     JEST: {
@@ -121,6 +122,7 @@ const projects = [
             <li>
               <span
                 class="flex gap-x-2 rounded-full text-xs bg-[#003159] py-1 px-2"
+                title={tag.name} data-tooltip-interactive="false" data-tooltip-placement="top"
               >
                 <tag.icon class="h-5 w-5" />
               </span>
