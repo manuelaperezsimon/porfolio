@@ -10,7 +10,6 @@ import NodeJS from "../icons/Nodejs.astro";
 import StyledComponents from "../icons/StyledComponents.astro";
 import Jest from "../icons/Jest.astro";
 import Badge from "./Badge.astro";
-import { Tooltips } from 'astro-tooltips';
 
 
 
@@ -62,6 +61,15 @@ const projects = [
     image: "/swipoo.webp",
     tags: [ TAGS.REACT, TAGS.TYPESCRIPT, TAGS.JEST, TAGS.STYLED_COMPONENTS],
   },
+ {
+    title: "Ecommerce",
+    description: "Web where you can see a list of diferents products, filter them by min price and category. You can add a product to the cart, remove it and clear the cart.",
+    link: "https://products-ecommercejs.netlify.app/",
+    github: {front: "https://github.com/manuelaperezsimon/shopping"},
+    image: "/ecommerce.webp",
+    tags: [TAGS.REACT, TAGS.JAVASCRIPT, TAGS.TAILWIND],
+  },
+
    {
     title: "Nuntia",
     description: "The meaning of nuntia refers to the word 'post' in latin. Is a SPA where you can read posts in latin. You can read, delete or edit the posts.",
